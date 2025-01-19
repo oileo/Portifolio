@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Signika+Negative:wght@300..700&display=swap');
+
+:root {
+	--background-header : #f2b5d4;
+	--background-item : #f7d6e0;
+	--background-button : #7bdff2;
+	--background-button-hover : #b2f7ef;
+	--background-blank : #eff7f6;
+	--color : #111;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: "Signika Negative", serif;
+	border: 0;
+	color: var(--color);
+	text-decoration: none;
+}
+
+body {
+	background-color: var(--background-blank);
+}
+
+header {
+	background-color: var(--background-header);
+	box-shadow: 0px 0px 5px #0005;
+	
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	padding: 10px;
+}
+
+h1[class="title"] {
+	font-family: "Bebas Neue", serif;
+	font-size: 50px;
+}
+
+header #menu-select {
+	display: flex;
+	gap: 10px;
+}
+
+header #menu-select a {
+	border: 5px solid var(--background-item);
+	padding: 10px 20px;
+	color: var(--background-blank);
+
+	transition: .5s;
+}
+
+header #menu-select a:hover {
+	color: var(--color);
+	background-color: var(--background-item);
+}
+
+.section {
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.section img {
+	border-radius: 5px;
+}
+
+.section .info {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.section .info h1 {
+	font-size: 60px;
+	text-align: center;
+}
+
+.section .info p {
+	font-size: 20px;
+}
+
+.section .grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, 400px);
+	grid-auto-rows: column;
+	gap: 10px;
+	justify-content: center;
+}
+
+.section .item {
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	border-radius: 3px;
+	box-shadow: 0px 5px 5px #0005;
+	cursor: pointer;
+	background-color: var(--background-button);
+	transition: .5s;
+}
+
+.section .grid .item .simple-title {
+	font-size: 50px;
+	font-style: bold;
+	text-align: center;
+}
+
+.section .item:hover {
+	background-color: var(--background-button-hover);
+}
+
+.h-section {
+	flex-direction: initial;
+}
+
+.h-section div {
+	justify-content: center;
+}
+
+
+.center {
+	justify-content: center;
+}
+
+footer {
+	padding: 10px;
+	background-color: var(--background-header);
+}
+
+footer h1 {
+	text-align: center;
+}
+
+footer ul {
+	display: flex;
+	width: 100%;
+	list-style: none;
+	justify-content: space-evenly;
+}
+
+@media only screen and (max-width: 900px) {
+	h1 {
+		text-align: center;
+	}
+
+	.h-section {
+		flex-direction: column;
+	}
+
+	.section img {
+		height: 100px;
+		object-fit: cover;
+	}
+
+	.grid {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.grid .item {
+		width: 90%;
+	}
+
+	header #menu-select {
+		display: none;
+	}
+
+	footer ul {
+		flex-direction: column;
+		align-items: center;
+	}
+}
